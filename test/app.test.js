@@ -9,10 +9,10 @@ describe('app', () => {
 
   const request = chai.request(app);
 
-  it('sends "hit home!" when a request hits /', done => {
+  it('sends HTML file when a request hits /', done => {
     request.get('/')
       .end((err, res) => {
-        assert.equal(res.text, 'hit home!');
+        assert.match(res.text, /Home/);
         done();
       });
   });
