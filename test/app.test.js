@@ -9,7 +9,7 @@ describe('app', () => {
 
   const request = chai.request(app);
 
-  it('says "hit home!" when a request hits /', done => {
+  it('sends "hit home!" when a request hits /', done => {
     request.get('/')
       .end((err, res) => {
         assert.equal(res.text, 'hit home!');
@@ -21,6 +21,14 @@ describe('app', () => {
     request.get('/fact')
       .end((err, res) => {
         assert.equal(res.text, 'HTTP is a set of standards that allow users of the World Wide Web to exchange information found on web pages');
+        done();
+      });
+  });
+
+  it('sends a 404 response if page doesn\'t exist', done => {
+    request.get('/doesntexist')
+      .end((err, res) => {
+        assert.equal(res.statusCode, 404);
         done();
       });
   });
