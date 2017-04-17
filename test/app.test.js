@@ -33,4 +33,12 @@ describe('app', () => {
       });
   });
 
+  it('responds with a greeting based on the provided name', done => {
+    request.get('/greeting/yuval')
+      .end((err, res) => {
+        assert.equal(res.text, 'hello yuval');
+        done();
+      });
+  });
+
 });
