@@ -26,6 +26,16 @@ describe('app', () => {
       });
   });
 
+  it('greets a person with a custom salutation', done => {
+    const salutation = 'Hey hey hey';
+    const name = 'Dave';
+    request.get(`/hello?name=${name}&salutation=${salutation}`)
+      .end((err, res) => {
+        assert.equal(res.text, 'Hey hey hey Dave');
+        done();
+      });
+  });
+
   it('responds with fun fact', done => {
     request.get('/fact')
       .end((err, res) => {

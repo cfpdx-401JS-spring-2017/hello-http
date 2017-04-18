@@ -11,4 +11,4 @@ In this lab, we had five main objectives:
 * Send a GET request to `/greeting/<name>/?salutation=<salutation>`, and be greeted by `<salutation> <name>`.
 * Return a 404: `CANNOT <method> <url>` if anything else is placed into your GET request.
 
-I passed all five tests.
+I passed all the first four tests, but cannot return the correct part of the error to pass the last test.
