@@ -41,4 +41,12 @@ describe('app', () => {
       });
   });
 
+  it('responds with a salutation if salutation query string included', done => {
+    request.get('/greeting/yuval/?salutation=hola')
+      .end((err, res) => {
+        assert.equal(res.text, 'hola yuval');
+        done();
+      });
+  });
+
 });
