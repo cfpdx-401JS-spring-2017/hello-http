@@ -45,7 +45,6 @@ describe('app', () => {
   it('returns a 404', done => {
     request.get('/doesnotexist')
     .end((err, res) => {
-      console.log(err);
       assert.equal(res.statusMessage, 'CANNOT GET /doesnotexist');
       done();
     });
