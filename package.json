@@ -23,11 +23,13 @@
   "dependencies": {
     "cowsay": "^1.1.9",
     "http": "0.0.0",
+    "mkdirp": "^0.5.1",
     "url": "^0.11.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
     "chai-http": "^3.0.0",
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "rimraf": "^2.6.1"
   }
 }
