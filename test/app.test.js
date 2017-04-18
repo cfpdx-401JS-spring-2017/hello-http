@@ -9,15 +9,16 @@ describe('app', () => {
 
   const request = chai.request(app);
 
-  it.only('says hello stranger', done => {
+  it('says hello stranger', done => {
     request.get('/hello')
       .end((err, res) => {
-        assert.equal(res.text, 'hello stranger');
+        assert.equal(res.text, 'Hello stranger');
         done();
       });
   });
 
   it('greets a person with a name', done => {
+    const name = 'Dave';
     request.get(`/hello?name=${name}`)
       .end((err, res) => {
         assert.equal(res.text, 'Hello Dave');
@@ -25,7 +26,7 @@ describe('app', () => {
       });
   });
 
-  it.only('responds with fun fact', done => {
+  it('responds with fun fact', done => {
     request.get('/fact')
       .end((err, res) => {
         assert.equal(res.text, 'Did you know that a pomeranian watched Michealangelo paint the Sistine Chapel? It\'s true.');
@@ -33,7 +34,7 @@ describe('app', () => {
       });
   });
 
-  it.only('serves contents of /index', done => {
+  it('serves contents of /index', done => {
     request.get('/')
       .end((err, res) => {
         assert.match(res.text, /This website is full of fluffy dogs./);
@@ -44,7 +45,8 @@ describe('app', () => {
   it('returns a 404', done => {
     request.get('/doesnotexist')
     .end((err, res) => {
-      assert.equal(res.text, '');
+      console.log(err);
+      assert.equal(res.statusMessage, 'CANNOT GET /doesnotexist');
       done();
     });
   });
