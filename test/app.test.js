@@ -48,7 +48,8 @@ describe('app', () => {
       request.get('/fact')
         .end((err, res) => {
           if (err) return done(err);
-          assert.equal(res)
+          assert.match(res.text, /The term hypertext/);
+          done();
         });
     });
   }),
@@ -58,8 +59,8 @@ describe('app', () => {
     it('returns status code 404 when resource is not found', done => {
       request.get('/ashde')
         .end((err, res) => {
-          if (err) return done(err);
-          assert.equal(res.statusCode, 404);
+          if(!err) done(err);
+          assert.equal(res.res.statusMessage, 'CANNOT GET /ashde');
           done();
         });
     });
