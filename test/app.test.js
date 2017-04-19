@@ -76,7 +76,7 @@ describe('app', () => {
       });
     });
 
-    it.only('POST /logs, creates directory', done => {
+    it('POST /logs, creates directory', done => {
       const postData = {
         text: 'blah',
         greeting: 'hey hey hey' };
@@ -100,6 +100,16 @@ describe('app', () => {
           });
         });
     });
+
+    it('GET /logs', done => {
+      request.get('/logs')
+      .end((err, res) => {
+        const resArray = JSON.parse(res.text);
+        assert.equal(resArray.length, 1);
+        done();
+      });
+    });
+
   });
 
 });
