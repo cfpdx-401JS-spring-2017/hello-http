@@ -1,9 +1,9 @@
-# Lab 1: Keeley Hammond
+# Lab 2: Keeley Hammond
 ## Complete!
 
-### Hello HTTP: Day 1
+### Hello HTTP: Day 2
  
-In this lab, we had five main objectives:
+In the original lab, we had five main objectives:
 
 * Send a GET request to root `/` or `index.html`, and return the contents of my HTML page.
 * Send a GET request to `/fact`, and return a fun fact about the Sistine Chapel!
@@ -11,4 +11,12 @@ In this lab, we had five main objectives:
 * Send a GET request to `/greeting/<name>/?salutation=<salutation>`, and be greeted by `<salutation> <name>`.
 * Return a 404: `CANNOT <method> <url>` if anything else is placed into your GET request.
 
-I passed all the first four tests, but cannot return the correct part of the error to pass the last test.
+Now in Tuesday's lab, we were given additional objectives:
+
+* Send a POST request to /logs, return a created directory `/logs` and the object.
+* If `/logs` does not exist, create `/logs`.
+* Create a new txt file with each POST.
+* Use `new Date().toISOString()` (aka a "timestamp") to uniquely name the txt file.
+* Return response `{ timestamp: <timestamp> }` with no `.txt` extension.
+
+In addition to the above objectives, I also added a GET request to `/logs` that returned an array of txt files.
