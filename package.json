@@ -9,6 +9,7 @@
   "dependencies": {
     "chai": "^3.5.0",
     "cowsay": "^1.1.9",
+    "fs-promise": "^2.0.2",
     "mkdirp-promise": "^5.0.1"
   },
   "devDependencies": {
