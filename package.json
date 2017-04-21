@@ -17,7 +17,7 @@
     "rimraf": "^2.6.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "start": "nodemon server.js",
     "pretest": "eslint ."
   },

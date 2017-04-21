@@ -33,7 +33,7 @@ describe('app', () => {
       .end((err, res) => {
         if(err) return done(err);
 
-        assert.equal(res.statusCode, 201);
+        assert.equal(res.statusCode, 200);
         fs.readdir('./logs', (err,files) => {
           assert.equal(files.length, 1);
           done();
