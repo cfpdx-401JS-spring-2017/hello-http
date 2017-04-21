@@ -1,0 +1,33 @@
+{
+  "name": "hello-http",
+  "version": "1.0.0",
+  "description": "Fill this in if you have time",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "chai": "^3.5.0",
+    "cowsay": "^1.1.9",
+    "fs-promise": "^2.0.2",
+    "mkdirp-promise": "^5.0.1"
+  },
+  "devDependencies": {
+    "chai-http": "^3.0.0",
+    "rimraf": "^2.6.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MartinPelayo/hello-http.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MartinPelayo/hello-http/issues"
+  },
+  "homepage": "https://github.com/MartinPelayo/hello-http#readme"
+}
