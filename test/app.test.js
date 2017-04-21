@@ -47,17 +47,4 @@ describe('app', () => {
 
 
 
-  // it ('says hello', done => {
-  //   request.get('/goodbye')
-  //     .end((err, res) => {
-  //       assert.equal(res.text, 'goodbye yall');
-  //       done();
-  //     });
-  // });
-
-
-
-
-
-
 
