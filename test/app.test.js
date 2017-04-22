@@ -13,7 +13,7 @@ describe('app', () => {
   it ('says what it do', done => {
     request.get('/hi')
       .end((err, res) => {
-        assert.equal(res.text, 'hi');
+        assert.equal(res.text, 'Sup world');
         done();
       });
   });
@@ -26,7 +26,7 @@ describe('app', () => {
       });
     });
 
-    it.only('create a logs direcotry if none exists and returns 201', done => {
+    it('create a logs direcotry if none exists and returns 201', done => {
       request
       .post('/logs')
       .field('text', 'this is the post body')
